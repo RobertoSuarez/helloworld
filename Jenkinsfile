@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent { 
+        node {
+            label 'docker-agent-alpine'
+        }
+    }
 
     tools {
         go 'golang_instalacion'
