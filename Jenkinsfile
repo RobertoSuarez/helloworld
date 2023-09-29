@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'jenkins:2.325.2-jdk11'
-        }
-    }
+    agent any
 
     stages {
         stage('Build') {
