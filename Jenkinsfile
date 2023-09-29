@@ -1,6 +1,8 @@
 pipeline {
     agent {
-        label: 'master'
+        docker {
+            image 'jenkins:2.325.2-jdk11'
+        }
     }
 
     stages {
