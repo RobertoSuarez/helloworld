@@ -1,18 +1,14 @@
 pipeline {
     agent {
-        node {
-            label 'docker-agent-golang'
-            }
-      }
-    triggers {
-        pollSCM '* * * * *'
+        label: 'master'
     }
+
     stages {
         stage('Build') {
             steps {
                 echo "Building.."
                 sh '''
-                echo "doing build stuff.."
+                echo "Compilando la app"
                 '''
             }
         }
@@ -20,7 +16,7 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                echo "doing test stuff..
+                echo "Testiando si todo va chido xD"
                 '''
             }
         }
@@ -28,7 +24,7 @@ pipeline {
             steps {
                 echo 'Deliver....'
                 sh '''
-                echo "doing delivery stuff.."
+                echo "Desplegando la app"
                 '''
             }
         }
