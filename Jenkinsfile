@@ -6,7 +6,7 @@ pipeline {
     }
 
     tools {
-        go 'golang_instalacion'
+        go 'go1.19'
     }
 
     environment {
