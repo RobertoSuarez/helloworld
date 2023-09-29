@@ -4,6 +4,9 @@ pipeline {
             label 'docker-agent-golang'
             }
       }
+    triggers {
+        pollSCM '* * * * *'
+    }
     stages {
         stage('Build') {
             steps {
