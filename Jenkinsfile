@@ -1,9 +1,5 @@
 pipeline {
-    agent { 
-        node {
-            label 'docker-agent-alpine'
-        }
-    }
+    agent any
 
     tools {
         go 'go1.19'
