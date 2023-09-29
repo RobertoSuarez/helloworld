@@ -16,7 +16,9 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                echo "Compilando la app"
+                echo "Compilando la app con "
+                go version
+                go build -o main
                 '''
             }
         }
@@ -33,6 +35,7 @@ pipeline {
                 echo 'Deliver....'
                 sh '''
                 echo "Desplegando la app"
+                ./main
                 '''
             }
         }
